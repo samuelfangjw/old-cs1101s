@@ -1,0 +1,141 @@
+---
+id: recursion
+title: "Recursion"
+---
+
+### Recursive Processes
+
+A _recursive process_ is a process that is characterised by accumulation of a chain of deferred operations.
+
+An _iterative process_ is a process that does not accumulate a chain of deferred operations.
+
+:::note
+Do not confuse a recursive process with a recursive function. A recursive function is a function that calls itself during its execution. Recursive processes usually result from recursive functions, but recursive functions can sometimes give rise to iterative processes too.
+:::
+
+For the rest of this document we will be using the factorial function as an example.
+
+```
+function factorial(n) {
+    return n === 1
+        ? 1
+        : n * factorial(n - 1);
+}
+```
+
+:::note
+For ease of explanation we will assume the input is always a positive number and ignore the case when n is 0. However, the function can be easily modified to account for the n === 0 case as well. Can you find a way to do so?
+:::
+
+### Deferred Operations?
+
+Deferred operations occur when we need to defer the application of that operation.
+
+Let's evaluate `factorial(4)` using the substitution model.
+
+```
+1. factorial(4);
+2. 4 * factorial(3);
+3. 4 * (3 * factorial(2));
+4. 4 * (3 * (2 * factorial(1)));
+5. 4 * (3 * (2 * 1));
+6. 4 * (3 * 2);
+7. 4 * 6;
+8. 24;
+```
+
+In this example, everytime the function calls itself recursively the **multiplication operation is deferred** until the result of `factorial(n - 1)` is known. These deferred operations are a characteristic feature of recursive processes.
+
+:::note
+The substitution model here 'skips' some of the intermediate steps such as checking if the predicate is true. Models are only useful if they help us to understand a problem better, and sometimes it is appropriate to remove small details that are not relevant to the problem.
+
+If you would like to see all the intermediate steps, try using the stepper tool in the Source Academy Playground.
+:::
+
+It is possible to make the factorial function iterative by adding extra parameters to keep track of the current product. Try it out on Source Academy before checking the answer below.
+
+<details><summary style={{fontSize:'larger', fontWeight:'600'}}>Click to see Iterative Factorial</summary>
+<p>
+
+```
+function factorial(n) {
+    function fact_iter(product, counter, max_count) {
+        return counter > max_count
+            ? product
+            : fact_iter(counter * product, counter + 1, max_count);
+    }
+
+    return fact_iter(1, 1, n);
+}
+```
+
+</p>
+</details>
+
+In the iterative version of factorial, there are *no deferred operations* (try applying the substitution model to this function!). Also notice how if we stop the program midway through its excecution the arguments of the function are enough for us to know the state of the problem. We can always call the function again with these arguments to get the correct answer. Compare this to a function with deferred operations, where just knowing the arguments is not enough because there are 'hidden' deferred operations.
+
+### Factorial
+
+[Factorial](https://en.wikipedia.org/wiki/Factorial) is defined as the product of all positive integers less than or equal to n. Here are the first few numbers in the factorial sequence. It is denoted by `n!`.
+
+| n   |                      n! |
+| --- | ----------------------: |
+| 5   | 5 x 4 x 3 x 2 x 1 = 120 |
+| 4   |      4 x 3 x 2 x 1 = 24 |
+| 3   |           3 x 2 x 1 = 6 |
+| 2   |               2 x 1 = 2 |
+| 1   |                   1 = 1 |
+
+Notice a pattern? To get the result of 5!, we can multiply the result of 4! by 5. In general, assuming input is always a positive number, we can define the function using these two rules:
+
+1. When `n is 1`, `n! = 1`
+2. When `n > 1`, `n! = n * (n - 1)`
+
+Now take a look at the factorial function again. You should be able to see how we have derived the factorial function from these two rules! When `n is 1`, we simply return `1`. For the other cases, we return the result of calling `factorial(n - 1)` multiplied by `n`.
+
+### 3 Step Method to solving recursion questions
+
+The factorial function can be derived easily, but for more complex problems it will be helpful to have a structured way to derive the rules above.
+
+1. Identify Base Case
+2. Identify Smaller Case
+3. Identify Recurrence Relation
+
+### Step 1: Identify Base Case
+
+The base case is the input for which the function returns the trivial result. To identify the base case, think of the simplest possible case. Usually this is the information that we already have.
+
+Some common base cases are `0` and `1`.
+
+For the factorial function, our base case is when `n == 1`. In this case, the function should return `1`.
+
+:::note
+A function may have more than one base case.
+:::
+
+:::important
+Why do we need a base case? Since the function repeatedly makes calls to itself, we need a way to stop the function from calling itself forever. Let's remove the base case from the function above and see what happens!
+
+```
+function wrong_factorial(n) {
+    return factorial(n - 1);
+}
+```
+
+:::
+
+### Step 2: Identify Smaller Case
+
+We want to identify the input that when reduced brings us closer to our base case. For functions with one parameter, this is easy! For functions with more than one parameter, we need to be more careful and identify which variable is the one that changes.
+
+For the factorial function, the smaller case is the `n - 1` case.
+
+### Step 3: Identify Recurrence Relation
+
+In layman's terms, we want to identify how the smaller case relates to the current case. To do this, we can use a method called **wishful thinking**! Using the power of wishful thinking, we first _assume_ that we have the answer to the smaller case. We then identify how this answer can help us obtain the answer to the current case.
+
+For example, for the factorial function, the smaller case is the `n - 1` case. Assume that we have the answer to the `n - 1` case, we know that all we need to do is multiply this answer by `n` to get the result we want.
+
+:::tip
+If you have difficulty applying wishful thinking, try writing/drawing the problem out and playing around with concrete examples! Instead of n, substitute a small number. Playing around with small examples is an important skill in this module that can help you solve many problems.
+:::

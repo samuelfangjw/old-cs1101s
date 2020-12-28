@@ -1,0 +1,116 @@
+---
+id: higherorderfunctions
+title: "Higher Order Functions"
+---
+
+### Lambda Expressions
+Lambda Expressions are an alternative way to create functions. Lambda expressions have the general form:
+
+`(parameters) => expression`
+
+If there is only one parameter, no brackets are required. A lambda expression alone is not associated with a name, though you may associate it with a name using the `const` keyword.
+Some examples:
+
+```
+x => x; // Identity function
+() => 1; // Nullary function (no parameters) that always returns 1
+
+// Function that adds x, y and z
+const add = (x, y, z) => x + y + z; // Lambda Expression
+
+// Equivalent function declaration
+function add(x, y, z) {
+    return x + y + z;
+}
+```
+
+These functions can be called just like regular functions
+```
+(x => x)(1); // returns 1
+(() => 1)(); // returns 1
+const add = (x, y, z) => x + y + z; // Lambda Expression
+add(1, 2, 3); // returns 6
+```
+
+We use lambda expressions because they are shorter and more convenient to write!
+
+:::note
+Lambda expressions can be used to express functions with multiple lines as follows:
+```
+const f = x => {
+    const y = 1;
+    return x + y;
+};
+```
+However, lambda expressions with multiple lines can get messy and hard to read so I would discourage you from using these unless necessary.
+:::
+
+### Higher Order Functions
+Higher order functions are functions that either:
+1. accepts one or more functions as arguments
+2. returns a function
+3. or both!
+
+Here is an example of a function that accepts a function as argument:
+
+```
+// Using lambda expressions
+const apply(f, x) => f(x); // applies function f to x
+apply(x => x + 1, 4); // returns 5
+```
+I used lambda expressions in the above example. Here is another example using function declarations, notice how much longer this example is.
+```
+// Equivalent using function declarations
+function add_one(x) {
+    return x  + 1;
+}
+
+function apply(f, x) {
+    return f(x);
+}
+
+apply(add_one, 4); // returns 5
+```
+
+Here is an example of a function that returns a function:
+```
+const make_func = x => y => x + y;
+make_func(1)(2); // returns 1 + 2
+```
+
+:::tip
+To evaluate chained lamba expressions, first identify the leftmost `=>` operator. Everything to the left is the parameters and everything to the right is what is being returned. For the function `make_func` above, the parameter is `x` and the return value is a function, `y => x + y`.
+:::
+
+And again the equivalent using function declarations:
+```
+function make_func(x) {
+    function add(y) {
+        return x + y;
+    }
+    return add;
+}
+make_func(1)(2); // reuturns 1 + 2
+```
+
+:::important
+What is the difference between the following functions g and h?
+
+function g(f, x) {
+    return f(x);
+}
+
+g(x => x, 1);
+
+function h(f, x) {
+    return f;
+}
+
+h(x => x, 1);
+
+<details><summary style={{fontSize:'larger', fontWeight:'600'}}>Click to see answer</summary>
+<p>
+Function g returns the result of applying function f to x (a number!). Function h returns the function f.
+</p>
+</details>
+:::
