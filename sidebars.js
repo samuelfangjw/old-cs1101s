@@ -27,7 +27,19 @@ module.exports = {
       id: 'review/s9'
     },
     {
-      Review: ['review/s10', 'review/s11', 'review/s12'],
+      type: 'doc',
+      id: 'review/s10'
+    },
+    {
+      type: 'doc',
+      id: 'review/s11'
+    },
+    {
+      type: 'doc',
+      id: 'review/s12'
+    },
+    {
+      // Review: ['review/s10', 'review/s11', 'review/s12'],
       // Extra: ['doc1'],
       // Docusaurus: ['doc1', 'doc2', 'doc3'],
       // Features: ['mdx'],
