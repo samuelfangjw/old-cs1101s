@@ -35,8 +35,7 @@ module.exports = {
       id: 'review/s11'
     },
     {
-      type: 'doc',
-      id: 'review/s12'
+      'Studio S12: Searching and Sorting; Memoisation': ['review/searchingandsorting', 'review/memoization']
     },
     {
       // Review: ['review/s10', 'review/s11', 'review/s12'],
