@@ -23,8 +23,7 @@ module.exports = {
       'Studio S6: List and Tree Processing': ['review/listprocessing']
     },
     {
-      type: 'doc',
-      id: 'review/s9'
+      'Studio S9: Mutable Data': ['review/identityvsequality', 'review/mutabledata']
     },
     {
       type: 'doc',

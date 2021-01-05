@@ -1,6 +1,6 @@
 ---
-id: s9
-title: 'Studio S9: Mutable Data'
+id: mutabledata
+title: 'Mutable Data'
 ---
 
 ## Variables

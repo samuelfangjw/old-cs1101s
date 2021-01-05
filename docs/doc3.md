@@ -8,4 +8,3 @@ TODO
 Orders of growth how to count operations
 Tree processing
 Substitution model
-Identity vs Equality
