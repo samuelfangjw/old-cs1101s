@@ -5,7 +5,6 @@ title: This is Document Number 3
 
 TODO
 
-Break and Continue
 Orders of growth how to count operations
 Tree processing
 Substitution model
