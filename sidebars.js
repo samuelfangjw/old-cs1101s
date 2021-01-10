@@ -36,11 +36,5 @@ module.exports = {
     {
       'Studio S12: Searching and Sorting; Memoisation': ['review/searchingandsorting', 'review/memoization']
     },
-    {
-      // Review: ['review/s10', 'review/s11', 'review/s12'],
-      // Extra: ['doc1'],
-      // Docusaurus: ['doc1', 'doc2', 'doc3'],
-      // Features: ['mdx'],
-    }
   ],
 };
