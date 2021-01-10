@@ -118,7 +118,7 @@ Why do we need a base case? Since the function repeatedly makes calls to itself,
 
 ```
 function wrong_factorial(n) {
-    return factorial(n - 1);
+    return wrong_factorial(n - 1);
 }
 ```
 
