@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Sam\'s CS1101S page',
-  tagline: 'My teaching resources for CS1101S this semester',
+  title: 'Studio T03\'s CS1101S page',
+  tagline: 'Resources for Studio T03',
   url: 'http://samuelfangjw.github.io/',
   baseUrl: '/CS1101S/',
   noIndex: true,
@@ -15,7 +15,7 @@ module.exports = {
       theme: require('prism-react-renderer/themes/oceanicNext'),
     },
     navbar: {
-      title: 'Studio XX',
+      title: 'Studio T03',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -39,16 +39,24 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Links',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Source Academy',
+              to: 'https://sourceacademy.nus.edu.sg/'
             },
+            {
+              label: 'Style Guide',
+              to: 'https://source-academy.github.io/source/source_styleguide.pdf'
+            },
+            {
+              label: 'Official Textbook',
+              to: 'https://source-academy.github.io/sicp/'
+            }
           ],
         },
         {
-          title: 'More',
+          title: 'Contribute',
           items: [
             {
               label: 'GitHub',
@@ -65,16 +73,9 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
             'https://github.com/samuelfangjw/CS1101S/blob/main',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

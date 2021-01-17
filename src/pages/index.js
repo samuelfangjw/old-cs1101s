@@ -6,61 +6,49 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-// const features = [
-//   {
-//     title: 'Easy to Use',
-//     imageUrl: 'img/undraw_docusaurus_mountain.svg',
-//     description: (
-//       <>
-//         Docusaurus was designed from the ground up to be easily installed and
-//         used to get your website up and running quickly.
-//       </>
-//     ),
-//   },
-//   {
-//     title: 'Focus on What Matters',
-//     imageUrl: 'img/undraw_docusaurus_tree.svg',
-//     description: (
-//       <>
-//         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-//         ahead and move your docs into the <code>docs</code> directory.
-//       </>
-//     ),
-//   },
-//   {
-//     title: 'Powered by React',
-//     imageUrl: 'img/undraw_docusaurus_react.svg',
-//     description: (
-//       <>
-//         Extend or customize your website layout by reusing React. Docusaurus can
-//         be extended while reusing the same header and footer.
-//       </>
-//     ),
-//   },
-// ];
+const features = [
+  {
+    title: 'Notes',
+    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    description: (
+      <>
+        Notes can be found at the Notes section of this site. You are welcome to contribute to them, just create an issue or pull request on the GitHub page!
+      </>
+    ),
+  },
+  {
+    title: 'Slides',
+    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    description: (
+      <>
+        Slides used during studio will be uploaded after each studio session at the Slides section of this site.
+      </>
+    ),
+  },
+];
 
-// function Feature({imageUrl, title, description}) {
-//   const imgUrl = useBaseUrl(imageUrl);
-//   return (
-//     <div className={clsx('col col--4', styles.feature)}>
-//       {imgUrl && (
-//         <div className="text--center">
-//           <img className={styles.featureImage} src={imgUrl} alt={title} />
-//         </div>
-//       )}
-//       <h3>{title}</h3>
-//       <p>{description}</p>
-//     </div>
-//   );
-// }
+function Feature({imageUrl, title, description}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={clsx('col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        </div>
+      )}
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
+}
 
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description={`${siteConfig.tagline}`}>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -78,16 +66,14 @@ function Home() {
         </div>
       </header>
       <main>
-        <div className="text-container">
+        {/* <div className="text-container">
           <h2>Hello there!</h2>
           <p>I'm planning to use this page to hold my teaching resourses next semester. Just testing this for now to see if it's feasible :)</p>
-        </div>
-      </main>
-      {/* <main>
+        </div> */}
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
+              <div className="row" style={{display:'flex', justifyContent:'space-around'}}>
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
@@ -95,7 +81,7 @@ function Home() {
             </div>
           </section>
         )}
-      </main> */}
+      </main>
     </Layout>
   );
 }
