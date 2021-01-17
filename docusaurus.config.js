@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Studio T03\'s CS1101S page',
   tagline: 'Resources for Studio T03',
-  url: 'http://samuelfangjw.github.io/',
-  baseUrl: '/CS1101S/',
+  url: 'http://samuelfangjw.github.io/CS1101S/',
+  baseUrl: '/',
   noIndex: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -10,6 +10,9 @@ module.exports = {
   organizationName: 'samuelfangjw', // Usually your GitHub org/user name.
   projectName: 'CS1101S', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      disableSwitch: true,
+    },
     prism: {
       defaultLanguage: 'javascript',
       theme: require('prism-react-renderer/themes/oceanicNext'),
@@ -37,6 +40,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
+      copyright: 'Made with ♡ using Docusaurus 2',
       links: [
         {
           title: 'Links',

@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Notes',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    imageUrl: 'img/notes.png',
     description: (
       <>
         Notes can be found at the Notes section of this site. You are welcome to contribute to them, just create an issue or pull request on the GitHub page!
@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: 'Slides',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/presentation.png',
     description: (
       <>
         Slides used during studio will be uploaded after each studio session at the Slides section of this site.
@@ -47,8 +47,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description={`${siteConfig.tagline}`}>
+      title="Home">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -66,10 +65,6 @@ function Home() {
         </div>
       </header>
       <main>
-        {/* <div className="text-container">
-          <h2>Hello there!</h2>
-          <p>I'm planning to use this page to hold my teaching resourses next semester. Just testing this for now to see if it's feasible :)</p>
-        </div> */}
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
