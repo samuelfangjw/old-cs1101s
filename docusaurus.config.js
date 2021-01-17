@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Studio T03\'s CS1101S page',
   tagline: 'Resources for Studio T03',
-  url: 'http://samuelfangjw.github.io/CS1101S/',
-  baseUrl: '/',
+  url: 'http://samuelfangjw.github.io/',
+  baseUrl: '/CS1101S/',
   noIndex: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
