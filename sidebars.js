@@ -5,15 +5,14 @@ module.exports = {
       id: 'about'
     },
     {
-      type:'doc',
-      id: 'review/s2'
+      'Studio S2: Elements of Programming and Substitution Model': ['review/s2', 'review/substitutionmodel']
+    },
+    {
+      'Studio S3: Recursion and Orders of Growth': ['review/ordersofgrowth', 'review/recursion']
     },
     {
       type: 'doc',
-      id: 'review/s3'
-    },
-    {
-      'Studio S4: Recursion and Higher Order Functions': ['review/recursion', 'review/higherorderfunctions', 'review/substitutionmodel']
+      id: 'review/higherorderfunctions'
     },
     {
       type: 'doc',

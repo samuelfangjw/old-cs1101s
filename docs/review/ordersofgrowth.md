@@ -1,6 +1,6 @@
 ---
-id: s3
-title: 'Studio S3: Orders of Growth'
+id: ordersofgrowth
+title: 'Orders of Growth'
 ---
 
 ## Motivation
