@@ -26,17 +26,25 @@ function Slides() {
           <tbody>
             <tr>
               <td>
-                <a href="https://1drv.ms/p/s!Arpt8z7gqAdjrFvjVMEc7O5Tm7Cj?e=CboYQd" target="_blank">
+                <a
+                  href="https://1drv.ms/p/s!Arpt8z7gqAdjrFvjVMEc7O5Tm7Cj?e=CboYQd"
+                  target="_blank"
+                >
                   Studio S2
                 </a>
               </td>
-              <td>
-                Elements of Programming
-              </td>
+              <td>Elements of Programming and Substitution Model</td>
             </tr>
             <tr>
-              <td>Studio S3</td>
-              <td>TBC</td>
+              <td>
+                <a
+                  href="https://1drv.ms/p/s!Arpt8z7gqAdjrF5SgC3565sVvXhz?e=CYSLcU"
+                  target="_blank"
+                >
+                  Studio S3
+                </a>
+              </td>
+              <td>Recursion and Orders of Growth</td>
             </tr>
           </tbody>
         </table>
