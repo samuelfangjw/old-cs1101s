@@ -46,6 +46,17 @@ function Slides() {
               </td>
               <td>Recursion and Orders of Growth</td>
             </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://1drv.ms/p/s!Arpt8z7gqAdjrGB1xYuh2oqxV1um?e=3fEsDt"
+                  target="_blank"
+                >
+                  Studio S4
+                </a>
+              </td>
+              <td>Higher Order Functions and Scoping Rules</td>
+            </tr>
           </tbody>
         </table>
       </div>
