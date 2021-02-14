@@ -57,6 +57,23 @@ function Slides() {
               </td>
               <td>Higher Order Functions and Scoping Rules</td>
             </tr>
+            <tr>
+              <td>
+                Studio S5 (No slides this week)
+              </td>
+              <td>Data Abstraction</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://1drv.ms/p/s!Arpt8z7gqAdjrGi4zHYu9a46Z4Gc?e=I9wx0k"
+                  target="_blank"
+                >
+                  Studio S6
+                </a>
+              </td>
+              <td>List and Tree Processing</td>
+            </tr>
           </tbody>
         </table>
       </div>
