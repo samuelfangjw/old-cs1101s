@@ -11,7 +11,6 @@ function Slides() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          height: "50vh",
           fontSize: "20px",
         }}
       >
