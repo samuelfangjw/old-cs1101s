@@ -73,6 +73,21 @@ function Slides() {
               </td>
               <td>List and Tree Processing</td>
             </tr>
+            <tr>
+              <td>
+                Studio S7 (No slides this week)
+              </td>
+              <td>Midterm Preperation</td>
+            </tr>
+            <td>
+                <a
+                  href="https://1drv.ms/p/s!Arpt8z7gqAdjrGxDgJACiHL2xHO_?e=A6K9Zd"
+                  target="_blank"
+                >
+                  Studio S8
+                </a>
+              </td>
+              <td>Midterm Review</td>
           </tbody>
         </table>
       </div>
